@@ -132,6 +132,7 @@
             document.getElementById("browsersave").value = localStorage.getItem("fullname");
             clr = localStorage.getItem("colorval");
             setsavedclr();
+            passval();
         }
 
         function browserstore(){
@@ -148,39 +149,58 @@
         }
 
         function passval(){
+            counterpass = 0;
+
             var x = document.getElementById("passwordval").value;
             if (x.length >= 15){
                 document.getElementById("passlength").style.display = 'none';
+                counterpass++;
             }else{
                 document.getElementById("passlength").style.display = 'block';
+                counterpass--;
             }
 
             var val1 = /^(?=(.*[A-Z]){4,}).+/
             if (val1.test(x)==true){
                 document.getElementById("passupper").style.display = 'none';
+                counterpass++;
             }else{
                 document.getElementById("passupper").style.display = 'block';
+                counterpass--;
             }
 
             var val2 = /^(?=(.*[a-z]){4,}).+/
             if (val2.test(x)==true){
                 document.getElementById("passlower").style.display = 'none';
+                counterpass++;
             }else{
                 document.getElementById("passlower").style.display = 'block';
+                counterpass--;
             }
 
             var val3 = /^(?=(.*[0-9]){2,}).+/
             if (val3.test(x)==true){
                 document.getElementById("passnum").style.display = 'none';
+                counterpass++;
             }else{
                 document.getElementById("passnum").style.display = 'block';
+                counterpass--;
             }
 
             var val4 = /^(?=(.*[^A-Za-z0-9 ]){3,}).+/
             if (val4.test(x)==true){
                 document.getElementById("passspecial").style.display = 'none';
+                counterpass++;
             }else{
                 document.getElementById("passspecial").style.display = 'block';
+                counterpass--;
+            }
+
+            if (counterpass==5){
+                console.log(counterpass);
+                document.getElementById("doneval").style.display = 'block';
+            }else{
+                document.getElementById("doneval").style.display = 'none';
             }
         }
 
@@ -215,3 +235,18 @@
             }
             
         }
+        const api = {
+            key: "908205a056d45fb659ce43c6db4cb0e7",
+            base: "https://api.openweathermap.org/data/2.5/"
+          }
+
+          function getResults (query) {
+            fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+              .then(weather => {
+                return weather.json();
+              }).then(displayResults);
+              console.log("API loaded");
+          }
+
+          let temp = document.querySelector('.current .temp');
+          temp.innerHTML = `${Math.round(weather.main.temp)}<span>°c</span>`;
