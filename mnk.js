@@ -133,6 +133,7 @@
             clr = localStorage.getItem("colorval");
             setsavedclr();
             passval();
+            getweather()
         }
 
         function browserstore(){
@@ -235,18 +236,18 @@
             }
             
         }
-        const api = {
-            key: "908205a056d45fb659ce43c6db4cb0e7",
-            base: "https://api.openweathermap.org/data/2.5/"
-          }
 
-          function getResults (query) {
-            fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
-              .then(weather => {
-                return weather.json();
-              }).then(displayResults);
-              console.log("API loaded");
-          }
+        function getweather(){
 
-          let temp = document.querySelector('.current .temp');
-          temp.innerHTML = `${Math.round(weather.main.temp)}<span>°c</span>`;
+            fetch ('https://api.openweathermap.org/data/2.5/weather?q=colombo&appid=ae4fe06579a79364db818382d52b17be')
+            .then(response => response.json())
+            .then(data => {
+                var tempval = data ['main']['temp']-273.15;
+
+                document.getElementById("tempvalcol").innerHTML = (tempval).toFixed(2);
+            })
+
+            .catch (err => alert("Weather Wada nathooo!!"))
+        }
+
+        
