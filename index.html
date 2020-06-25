@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 2</title>
+        <link rel="stylesheet" type="text/css" href="mnk.css">
+        <script src="mnk.js"></script>
+
+    </head>
+    <body onload="retrieve()" onclick="changec()">
+        <div>
+            <h3>Total of 2 Integers:</h3>
+            <label for="num1">Number 1: </label>
+            <input type="text" id="num1" placeholder="Number 1"/>
+            <label for="num2">Number 2: </label>
+            <input type="text" id="num2" placeholder="Number 2"/>
+            <input type="button" onclick="total()" value="Total">
+            <input type="text" id="num3" readonly/>
+            <input type="button" onclick="clear_n()" value="Clear">
+        </div>
+
+        <div>
+            <h3>BMI Calculator:</h3>
+            <label for="weight">Weight(KG): </label>
+            <input type="text" id="weight" placeholder="Weight(KG)"/>
+            <label for="height">Height(cm): </label>
+            <input type="text" id="height" placeholder="Height(cm)"/>
+            <input type="button" onclick="bmi()" value="BMI Calculate">
+            <input type="text" id="bmi" />
+            <input type="button" onclick="clear_bmi()" value="Clear">
+            <p>Formula : Weight(kg)/Height(m)2</p>
+        </div>
+
+        <div>
+            <h3>Temperature Converter:</h3>
+            <label id="temp1.1" for="temp1">Celcius: </label>
+            <input type="text" id="temp1" placeholder="0.00"/>
+            <label id="temp1.2" for="temp2">Fahrenheit: </label>
+            <input type="text" id="temp2" />
+            <input type="button" value="Convert" id="temp_convert" onclick="temp_convert1()">
+            <input type="button" onclick="switch_t()" value="Switch">
+        </div>
+
+        <div>
+            <h3>Save to Browser</h3>
+            <input type="text" id="browsersave" placeholder="Your name" onkeyup="browserstore()"/>
+        </div>
+
+        <div style="display: flex;">
+            
+            <div style="width: 50%;">
+            <h3>Password Generator</h3>
+            <input type="text" id="passwordval" onkeyup="passval()"/>
+            </div>
+            <div style="width: 50%;">
+                <ul>
+                    <li id="passlength">Number of characters should be at least 15</li>
+                    <li id="passspecial">Should contain at least 3 different special characters</li>
+                    <li id="passupper">Should contain at least 4 uppercase alphabetical characters</li>
+                    <li id="passlower">Should contain at least 4 lowercase alphabetical characters</li>
+                    <li id="passnum">Should contain at least 2 numbers</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div>
+            <h3>Save Text</h3>
+            <label>Enter your Text:</label>
+            <textarea id="savetext" cols="60" rows="20"></textarea>
+            <br>
+            <br>
+            <label>File name:</label>
+            <input type="text" id="saveName"/>
+            <input type="button" onclick="save_text()" value="Save File"/>
+        </div>
+
+   
+            <h3>Colour Change</h3>
+            <label>Click anywhere on the page to change colour</label>
+            <div class="square" id="squarec" style="width: 100%;"></div>
+
+        
+    </body>
+</html>
