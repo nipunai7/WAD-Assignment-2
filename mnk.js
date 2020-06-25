@@ -4,7 +4,7 @@
         function total(){
                 var x = parseInt(document.getElementById("num1").value);
                 var y = parseInt(document.getElementById("num2").value);
-                var z = x+y;
+                var z = x+y;  
 
            if (isNaN(z)){
                 console.log(z);
@@ -13,6 +13,18 @@
                 console.log(z);
                 document.getElementById("num3").value = z;
            }
+
+        }
+
+        function numval1(){
+
+            var x = parseInt(document.getElementById("num1").value);
+            var y = parseInt(document.getElementById("num2").value);
+
+            var numval = /^-?[0-9]*$/
+            if ((numval.test(x) || numval.test(y))==false){
+                alert("Please only insert numbers");
+            }
         }
 
         function clear_n(){
