@@ -19,11 +19,20 @@
         function numval1(){
 
             var x = parseInt(document.getElementById("num1").value);
+
+            var numval =  /^-?[0-9]*$/
+            if ((numval.test(x))==false){
+                alert("Please be careful to only insert numbers");
+            }
+        }
+
+        function numval2(){
+
             var y = parseInt(document.getElementById("num2").value);
 
-            var numval = /^-?[0-9]*$/
-            if ((numval.test(x) || numval.test(y))==false){
-                alert("Please only insert numbers");
+            var numval =  /^-?[0-9]*$/
+            if ((numval.test(y))==false){
+                alert("Please be careful to only insert numbers");
             }
         }
 
