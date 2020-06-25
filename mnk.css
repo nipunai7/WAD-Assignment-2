@@ -1,5 +1,22 @@
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .square {
   height: 50px;
   width: 50px;
   background-color: #555;
+}
+
+.backgroundcars{
+  background-color: aliceblue;
+  border-radius: 10px;
+  border-color: blue;
+  border-width: 10px;
+  margin-bottom: 10px;
+
+}
+
+.backgroundcars h3{
+  padding-left: 10px;
 }

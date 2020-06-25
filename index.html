@@ -7,7 +7,7 @@
 
     </head>
     <body onload="retrieve()" onclick="changec()">
-        <div>
+        <div class="backgroundcars">
             <h3>Total of 2 Integers:</h3>
             <label for="num1">Number 1: </label>
             <input type="text" id="num1" placeholder="Number 1"/>
@@ -18,7 +18,7 @@
             <input type="button" onclick="clear_n()" value="Clear">
         </div>
 
-        <div>
+        <div class="backgroundcars">
             <h3>BMI Calculator:</h3>
             <label for="weight">Weight(KG): </label>
             <input type="text" id="weight" placeholder="Weight(KG)"/>
@@ -30,7 +30,7 @@
             <p>Formula : Weight(kg)/Height(m)2</p>
         </div>
 
-        <div>
+        <div class="backgroundcars">
             <h3>Temperature Converter:</h3>
             <label id="temp1.1" for="temp1">Celcius: </label>
             <input type="text" id="temp1" placeholder="0.00"/>
@@ -40,12 +40,12 @@
             <input type="button" onclick="switch_t()" value="Switch">
         </div>
 
-        <div>
+        <div class="backgroundcars">
             <h3>Save to Browser</h3>
             <input type="text" id="browsersave" placeholder="Your name" onkeyup="browserstore()"/>
         </div>
 
-        <div style="display: flex;">
+        <div style="display: flex;" class="backgroundcars">
             
             <div style="width: 50%;">
             <h3>Password Generator</h3>
@@ -63,19 +63,19 @@
             </div>
         </div>
         
-        <div>
+        <div class="backgroundcars">
             <h3>Colour Change</h3>
             <label>Click anywhere on the page to change colour</label>
             <div class="square" id="squarec" style="width: 100%;"></div>
         </div>
 
-        <div>
+        <div class="backgroundcars">
             <h3>Weather API</h3>
             <label>Current Temperature for Colombo: </label>
             <label id="tempvalcol"></label>°C
         </div>
 
-        <div>
+        <div class="backgroundcars">
             <h3>Save Text</h3>
             <label>Enter your Text:</label>
             <textarea id="savetext" cols="60" rows="20"></textarea>
