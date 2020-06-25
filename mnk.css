@@ -14,9 +14,11 @@ body{
   border-color: blue;
   border-width: 10px;
   margin-bottom: 10px;
+  padding: 10px;
 
 }
 
 .backgroundcars h3{
-  padding-left: 10px;
+  margin-top: 0px;
+  
 }

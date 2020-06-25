@@ -27,7 +27,7 @@
             <input type="button" onclick="bmi()" value="BMI Calculate">
             <input type="text" id="bmi" />
             <input type="button" onclick="clear_bmi()" value="Clear">
-            <p>Formula : Weight(kg)/Height(m)2</p>
+            <p>Formula : Weight(kg)/Height(m)<sup>2</sup></p>
         </div>
 
         <div class="backgroundcars">
@@ -53,7 +53,7 @@
             </div>
             <div style="width: 50%;">
                 <ul>
-                    <li id="doneval"> Your Password is Valid</li>
+                    <li id="doneval" style="background-color: green;border-radius: 6px;width: 200px;color: aliceblue;text-align: center;"> Your Password is Valid</li>
                     <li id="passlength">Number of characters should be at least 15</li>
                     <li id="passspecial">Should contain at least 3 different special characters</li>
                     <li id="passupper">Should contain at least 4 uppercase alphabetical characters</li>
@@ -71,7 +71,7 @@
 
         <div class="backgroundcars">
             <h3>Weather API</h3>
-            <label>Current Temperature for Colombo: </label>
+            <label>Current Temperature in Colombo: </label>
             <label id="tempvalcol"></label>°C
         </div>
 
