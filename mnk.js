@@ -248,7 +248,7 @@
                 document.getElementById("tempvalcol").innerHTML = (tempval).toFixed(2);
             })
 
-            .catch (err => alert("Weather Wada nathooo!!"))
+            .catch (err => alert("Don't refresh continously, wait till weather data loads :D!!!"))
         }
 
         
