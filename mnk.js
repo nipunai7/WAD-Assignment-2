@@ -1,5 +1,5 @@
     var switch_t_val=0;
-    var clr;
+    var clr=0;
 
         function total(){
                 var x = parseInt(document.getElementById("num1").value);
@@ -134,6 +134,7 @@
             setsavedclr();
             passval();
             getweather();
+            console.log(clr);
         }
 
         function browserstore(){
@@ -207,13 +208,13 @@
 
         function setsavedclr(){
             if (clr==0){
-                document.getElementById("squarec").style.backgroundColor = "blue";
-            }else if(clr==1){
                 document.getElementById("squarec").style.backgroundColor = "yellow";
-            }else if(clr==2){
+            }else if(clr==1){
                 document.getElementById("squarec").style.backgroundColor = "red";
-            }else if(clr=3){
+            }else if(clr==2){
                 document.getElementById("squarec").style.backgroundColor = "green";
+            }else if(clr=3){
+                document.getElementById("squarec").style.backgroundColor = "blue";
             }
         }
 
@@ -222,16 +223,16 @@
             console.log(clr);
 
             if (clr==0){
-                document.getElementById("squarec").style.backgroundColor = "blue";
+                document.getElementById("squarec").style.backgroundColor = "yellow";
                 clr = 1;
             }else if(clr==1){
-                document.getElementById("squarec").style.backgroundColor = "yellow";
+                document.getElementById("squarec").style.backgroundColor = "red";
                 clr = 2;
             }else if(clr==2){
-                document.getElementById("squarec").style.backgroundColor = "red";
+                document.getElementById("squarec").style.backgroundColor = "green";
                 clr = 3;
             }else if(clr=3){
-                document.getElementById("squarec").style.backgroundColor = "green";
+                document.getElementById("squarec").style.backgroundColor = "blue";
                 clr = 0;
             }
             
